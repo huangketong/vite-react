@@ -1,0 +1,29 @@
+.title-container {
+  display: flex;
+  margin-bottom: 20px;
+  
+}
+.container {
+  height: 420px;
+  width: 420px;
+  background-color: rgb(145, 143, 143);
+  /* padding-top: 30px;
+  padding-bottom: 30px; */
+  display: flex;
+  /* flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start; */
+}
+.item {
+  height: 60px;
+  width: 60px;
+  background-color: rgb(185, 179, 95);
+  text-align: center;
+  line-height: 60px;
+}
+.select {
+  width: 150px;
+  height: 30px;
+  font-size: 16px;
+  padding-left: 5px;
+}

@@ -1,0 +1,130 @@
+.div1 {
+  margin-bottom: 20px;
+  background-color: blueviolet;
+}
+
+.div2 {
+  background-color: bisque;
+  margin-top: 50px;
+  /* float: left; */
+}
+
+.div2::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.left {
+  width: 180px;
+  height: 60px;
+  background-color: cadetblue;
+  float: left;
+}
+.right {
+  height: 60px;
+  background-color: chocolate;
+  overflow: hidden;
+}
+
+.parent {
+  display: flex;
+}
+.child1 {
+  width: 200px;
+  height: 50px;
+  background-color: cornflowerblue;
+}
+.child2 {
+  flex: 1;
+  height: 50px;
+  background-color: cyan;
+}
+
+.f1 {
+  float: left;
+  width: 120px;
+  height: 50px;
+  background-color: darkblue;
+}
+.f2 {
+  margin-left: 120px;
+  height: 50px;
+  background-color: darkgreen;
+}
+
+.f3 {
+  float: left;
+  width: 120px;
+  height: 40px;
+  background-color: darkblue;
+}
+.f4 {
+  float: right;
+  width: calc(100% - 120px);
+  height: 40px;
+  background-color: darkgreen;
+}
+
+.table {
+  display: table;
+  width: 100%;
+  height: 60px;
+}
+.tableLeft {
+  display: table-cell;
+  width: 100px;
+  background-color: burlywood;
+}
+.tableRight {
+  display: table-cell;
+  background-color: cornflowerblue;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(150px, 150px) 1fr;
+  /* grid-template-columns指定页面分成两列。
+  第一列的宽度是minmax(150px, 25%)，即最小宽度为150px，最大宽度为总宽度的25%；
+  第二列为 1fr，即所有剩余宽度 */
+}
+.gridLeft {
+  background-color: darkgreen;
+}
+.gridRight {
+  background-color: darkolivegreen;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+.positionLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 60px;
+  background-color: darkslategray;
+}
+.positionRight {
+  margin-left: 100px;
+  height: 60px;
+  background-color: darkviolet;
+}
+
+.div5 {
+  background-color: bisque;
+  margin: 10px;
+  /* 解决父子元素外边距重叠 */
+  display: inline-block;
+  /* margin-top: 0px;
+  padding-top: 10px; */
+}
+
+.div6 {
+  height: 30px;
+  width: 50px;
+  margin: 10px;
+  background-color: blue;
+}
