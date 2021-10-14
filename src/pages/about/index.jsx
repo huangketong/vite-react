@@ -1,13 +1,13 @@
 /*
  * @Author: Ketong
  * @Date: 2021-07-12 14:03:17
- * @LastEditTime: 2021-09-10 14:26:29
+ * @LastEditTime: 2021-10-14 13:40:45
  * @LastEditors: Ketong
  * @Description: Description
  */
 
-import React, { useEffect } from 'react';
-import TextComponent from './event';
+import React, { useEffect } from 'react'
+import TextComponent from './event'
 
 export default () => {
   // useEffect(() => {
@@ -27,17 +27,17 @@ export default () => {
   // }, []);
 
   const handleRoot = () => {
-    console.log('click root element');
-  };
+    console.log('click root element')
+  }
 
-  const handleParent = (e) => {
+  const handleParent = e => {
     // e.preventDefault();
-    console.log('click parent element');
-  };
-  const handleChild = (e) => {
-    e.stopPropagation();
-    console.log('click child element');
-  };
+    console.log('click parent element')
+  }
+  const handleChild = e => {
+    e.stopPropagation()
+    console.log('click child element')
+  }
   return (
     <div>
       <h3>事件冒泡</h3>
@@ -62,5 +62,5 @@ export default () => {
       </div> */}
       <TextComponent />
     </div>
-  );
-};
+  )
+}

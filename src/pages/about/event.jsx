@@ -1,20 +1,19 @@
 /*
  * @Author: Ketong
  * @Date: 2021-09-10 14:00:31
- * @LastEditTime: 2021-09-10 15:13:43
+ * @LastEditTime: 2021-10-14 13:40:39
  * @LastEditors: Ketong
  * @Description: Description
  */
 
-import React from 'react';
+import React from 'react'
 
 class TextComponent extends React.Component {
-
-  child = null;
-  parent = null;
+  child = null
+  parent = null
 
   componentDidMount() {
-    this.parent.addEventListener('click', (e) => {
+    this.parent.addEventListener('click', e => {
       console.log('parent Dom')
     })
 
@@ -25,7 +24,7 @@ class TextComponent extends React.Component {
     document.addEventListener('click', () => {
       console.log('document Dom')
     })
-    
+
     document.body.addEventListener('click', () => {
       console.log('body Dom')
     })
@@ -44,9 +43,9 @@ class TextComponent extends React.Component {
   clickParent = () => {
     console.log('clickParent React')
   }
-  clickChild = (event) => {
+  clickChild = event => {
     // event.preventDefault();
-    event.stopPropagation();
+    event.stopPropagation()
     console.log('clickChild React')
   }
 
@@ -54,20 +53,20 @@ class TextComponent extends React.Component {
     console.log('render')
     return (
       <div
-        ref={(ref) => this.parent = ref}
+        ref={ref => (this.parent = ref)}
         className="parent"
         style={{ height: '200px', width: '200px', backgroundColor: '#fafa' }}
         onClick={this.clickParent}
       >
         <div
-          ref={(ref) => this.child = ref}
+          ref={ref => (this.child = ref)}
           className="child"
           style={{ height: '100px', width: '100px', backgroundColor: '#f1f' }}
           onClick={this.clickChild}
         ></div>
       </div>
-    );
+    )
   }
 }
 
-export default TextComponent;
+export default TextComponent

@@ -1,29 +1,28 @@
 /*
  * @Author: Ketong
  * @Date: 2021-07-12 14:09:42
- * @LastEditTime: 2021-09-13 09:26:45
+ * @LastEditTime: 2021-10-14 13:42:35
  * @LastEditors: Ketong
  * @Description: Description
  */
 
-import React, { useState } from 'react';
-import './index.css';
-import { Select, Button } from 'antd';
+import React, { useState } from 'react'
+import './index.css'
+import { Select, Button } from 'antd'
 
 // const { counts, sayHello } = require('./module.js');
-import { counts, sayHello } from './module.js';
+import { counts, sayHello } from './module.js'
 
-const Option = Select.Option;
+const Option = Select.Option
 
 export default () => {
-  const [flexDirection, setFlexDirection] = useState('row');
-  const [justifyContent, setJustifyContent] = useState('flex-start');
-  const [alignItems, setAlignItems] = useState('flex-start');
-
+  const [flexDirection, setFlexDirection] = useState('row')
+  const [justifyContent, setJustifyContent] = useState('flex-start')
+  const [alignItems, setAlignItems] = useState('flex-start')
 
   const click = () => {
     console.log('counts: ', counts)
-    sayHello();
+    sayHello()
   }
 
   return (
@@ -31,11 +30,7 @@ export default () => {
       <div className="title-container">
         <div>
           <h4>flex-direction:</h4>
-          <Select
-            className="select"
-            value={flexDirection}
-            onChange={(e) => setFlexDirection(e)}
-          >
+          <Select className="select" value={flexDirection} onChange={e => setFlexDirection(e)}>
             <Option value="row">row</Option>
             <Option value="column">column</Option>
             <Option value="row-reverse">row-reverse</Option>
@@ -44,11 +39,7 @@ export default () => {
         </div>
         <div>
           <h4>justify-content:</h4>
-          <Select
-            className="select"
-            value={justifyContent}
-            onChange={(e) => setJustifyContent(e)}
-          >
+          <Select className="select" value={justifyContent} onChange={e => setJustifyContent(e)}>
             <Option value="flex-start">flex-start</Option>
             <Option value="center">center</Option>
             <Option value="flex-end">flex-end</Option>
@@ -58,11 +49,7 @@ export default () => {
         </div>
         <div>
           <h4>align-items:</h4>
-          <Select
-            className="select"
-            value={alignItems}
-            onChange={(e) => setAlignItems(e)}
-          >
+          <Select className="select" value={alignItems} onChange={e => setAlignItems(e)}>
             <Option value="flex-start">flex-start</Option>
             <Option value="center">center</Option>
             <Option value="flex-end">flex-end</Option>
@@ -90,8 +77,10 @@ export default () => {
       <h2>import/export 是 ES6 的标准，适用范围如 React</h2>
       <div>
         <p>import {counts}</p>
-        <Button type="primary" onClick={click}>import </Button>
+        <Button type="primary" onClick={click}>
+          import{' '}
+        </Button>
       </div>
     </>
-  );
-};
+  )
+}

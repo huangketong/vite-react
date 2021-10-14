@@ -1,46 +1,46 @@
 /*
  * @Author: Ketong
  * @Date: 2021-09-26 09:44:55
- * @LastEditTime: 2021-09-30 16:25:44
+ * @LastEditTime: 2021-10-14 13:40:56
  * @LastEditors: Ketong
  * @Description: Description
  */
 
-import React, { useState } from 'react';
-import { Button, Row, message } from 'antd';
-import './index.less';
-import hammer from '../../../public/img-1.png';
+import React, { useState } from 'react'
+import { Button, Row, message } from 'antd'
+import './index.less'
+import hammer from '../../../public/img-1.png'
 
 export default () => {
-  const [play, setPlay] = useState(false); // 动画是否运转
-  const [target, setTarget] = useState(0);
+  const [play, setPlay] = useState(false) // 动画是否运转
+  const [target, setTarget] = useState(0)
 
   const handleStart = () => {
-    setPlay((paly) => !paly);
-    setTarget(0);
-  };
+    setPlay(paly => !paly)
+    setTarget(0)
+  }
 
-  const handleItem = (i) => {
-    if (!play) return;
+  const handleItem = i => {
+    if (!play) return
 
-    setPlay((paly) => !paly);
-    setTarget(i);
+    setPlay(paly => !paly)
+    setTarget(i)
 
     setTimeout(() => {
       message.info('一等奖')
     }, 800)
-  };
+  }
 
   const animationStyle = {
     animationPlayState: play ? 'running' : 'paused',
-  };
+  }
 
   const hammerTransformStyle = {
     // visibility: 'visible',
     // transform: 'rotate(-45deg)',
     // transformOrigin: '80px 70px',
     // transition: 'transform 1s ease-in -1s',
-  };
+  }
 
   return (
     <div className="wrap">
@@ -88,5 +88,5 @@ export default () => {
         </Button>
       </Row>
     </div>
-  );
-};
+  )
+}
